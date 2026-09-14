@@ -41,6 +41,8 @@ Each track contains an index file and topic-specific Markdown notes. The index f
 
 The notes use Markdown, and several index files use Obsidian-style `[[page-name]]` links. A Markdown editor or knowledge-base application that supports those links provides the best local navigation experience.
 
+Answers to Hack The Box questions and practical exercises are intentionally not included. This keeps the repository focused on learning and practice, while avoiding the risk of enabling plagiarism or causing academic and platform-related issues.
+
 ## Contributing Notes
 
 There is no application to build and no dependency installation required. Changes should remain focused on study content and preserve the existing organization:
