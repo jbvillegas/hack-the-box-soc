@@ -10,7 +10,6 @@ One of the common tools is **which**. This tool returns the path to the file or 
 
 Another handy tool is **find**. Besides the function to find files and folders, this tool also contains the function to filter the results. We can use filter parameters like the size of the file or the date. We can also specify if we only search for files or folders.
 
-![[Pasted image 20260717105205.png]]
 
 ## Locate 
 

@@ -10,7 +10,6 @@ Because of the many different functions and filters, we should first familiarize
 
 Below is a table of basic Tcpdump switches we can use to modify how our captures run. These switches can be chained together to craft how the tool output is shown to us in STDOUT and what is saved to the capture file. This is not an exhaustive list, and there are many more we can use, but these are the most common and valuable.
 
-![[Pasted image 20260727104601.png]]
 ## Summary
 
 This section explains **Tcp Dump Fundamentals**. It focuses on Traffic Captures with Tcpdump.

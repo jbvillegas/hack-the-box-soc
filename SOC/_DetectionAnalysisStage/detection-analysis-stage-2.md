@@ -12,8 +12,6 @@ The investigation starts based on the initially gathered (and limited) informati
 - Identification of new leads and impacted systems.
 - Data collection and analysis from the new leads and impacted systems.
 
-![[Pasted image 20260718131658.png]]
-
 Flowchart showing investigation process: Initial Investigation Data leads to IOCs, Compromised Systems, and Collection & Analysis.
 
 ### Initial Investigation Data

@@ -14,7 +14,6 @@ Hypertext Transfer Protocol (`HTTP`) is a stateless Application Layer protocol t
 
 To perform operations such as fetching webpages, requesting items for download, or posting your most recent tweet all require the use of specific methods. These methods define the actions taken when requesting a URI. Methods:
 
-![[Pasted image 20260727102426.png]]
 
 ## HTTPS
 
@@ -61,7 +60,6 @@ The image above shows several examples of requests issued over the FTP command c
 
 When looking at FTP traffic, some common commands we can see passed over port 21 include:
 
-![[Pasted image 20260727102530.png]]
 
 This is not an exhaustive list of the possible FTP control commands that could be seen. These can vary based on the FTP application or shell in use. For more information on FTP, see `RFC:959`.
 

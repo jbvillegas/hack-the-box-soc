@@ -70,7 +70,6 @@ The Linux operating system can be broken down into layers:
 
 The Linux operating system is structured in a tree-like hierarchy and is documented in the *Filesystem Hierarchy Standard (FHS)*. Linux is structured with the following standard top-level directories:
 
-![[Pasted image 20260717085535.png]]
 
 **/**	The top-level directory is the root filesystem and contains all of the files required to boot the operating system before other filesystems are mounted, as well as the files required to boot the other filesystems. After boot, all of the other filesystems are mounted at standard mount points as subdirectories of the root.
 

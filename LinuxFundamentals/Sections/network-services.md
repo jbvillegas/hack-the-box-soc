@@ -20,7 +20,6 @@ Network File System (NFS) is a network protocol that allows us to store and mana
 
 It can also be used to share and manage resources efficiently, e.g., to replicate file systems between servers. It also offers features such as access controls, real-time file transfer, and support for multiple users accessing data simultaneously. We can use this service just like FTP in case there is no FTP client installed on the target system, or NFS is running instead of FTP.
 
-![[Pasted image 20260722093410.png]]
 
 ## Web Server
 

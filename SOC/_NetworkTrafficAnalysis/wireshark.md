@@ -19,7 +19,6 @@ Depending on the host we are using, we may not always have a GUI to utilize trad
 
 Both options have their merits. TShark is a purpose-built terminal tool based on Wireshark. TShark shares many of the same features that are included in Wireshark and even shares syntax and options. TShark is perfect for use on machines with little or no desktop environment and can easily pass the capture information it receives to another tool via the command line. Wireshark is the feature-rich GUI option for traffic capture and analysis. If you wish to have the full-featured experience and work from a machine with a desktop environment, the Wireshark GUI is the way to go.
 
-![[Pasted image 20260727114005.png]]
 
 Three Main Panes: `See Figure above`
 
@@ -39,7 +38,6 @@ Three Main Panes: `See Figure above`
     - This is a great way to validate that what we see in the Details pane is accurate and the interpretation Wireshark made matches the packet output.
     - Each line in the output contains the data offset, sixteen hexadecimal bytes, and sixteen ASCII bytes. Non-printable bytes are replaced with a period in the ASCII format.
 
-![[Pasted image 20260727114810.png]]
 
 #### Display Filters
 
@@ -47,7 +45,6 @@ Three Main Panes: `See Figure above`
 
 Here is a table of common and helpful display filters with a description of each:
 
-![[Pasted image 20260727114910.png]]
 ## Summary
 
 This section explains **Analysis with Wireshark**. It focuses on TShark VS. Wireshark (Terminal vs. GUI).

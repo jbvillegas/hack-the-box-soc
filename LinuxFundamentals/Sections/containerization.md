@@ -20,7 +20,6 @@ Docker is an open-source platform for automating the deployment of applications 
 
 Imagine Docker containers as a sealed lunchbox. You can eat the food (run applications) inside, but once you close the box (stop the container), everything resets. To make a new lunchbox (new container) with updated contents (modified configurations), you create a new recipe (Dockerfile) based on the original. When serving multiple lunchboxes in a restaurant (production), you'd use a kitchen system (Kubernetes/Docker Compose) to manage all the orders smoothly.
 
-![[Pasted image 20260722102037.png]]
 
 ## Linux Containers
 
@@ -30,7 +29,6 @@ LXC provides a comprehensive set of tools and APIs for managing and configuring 
 
 Docker builds upon the idea of containerization by adding ease of use and portability, which has made it highly popular in the world of DevOps. Docker emphasizes packaging applications with all their dependencies in a portable "image", allowing them to be easily deployed across different environments. However, there are some differences between the two that can be distinguished based on the following categories:
 
-![[Pasted image 20260722102124.png]]
 
 As penetration testers, we often face situations where we need to test software or systems that have complex dependencies or configurations that are difficult to replicate on our local machines. This is where Linux containers become extremely useful. A Linux container is a lightweight, standalone package that includes everything needed to run a specific piece of software such as the code, libraries, and configuration files. Containers offer an isolated environment, allowing the software to run consistently across any Linux machine, regardless of the host system’s configuration.
 

@@ -10,7 +10,6 @@ RegEx is available in many programming languages and tools, such as grep or sed,
 
 Among other things, regex offers us the possibility to group the desired search patterns. Basically, regex follows three different concepts, which are distinguished by the three different brackets:
 
-![[Pasted image 20260717122521.png]]
 ## Summary
 
 This section explains **Regular Expressions**. It focuses on Grouping.

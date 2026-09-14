@@ -12,7 +12,6 @@ Utilizing more advanced filtering options like those listed below will enable us
 
 These filters and advanced operators are by no means an exhaustive list. They were chosen because they are the most frequently used and will get us up and running quickly. When implemented, these filters will inspect any packets captured and look for the given values in the protocol header to match.
 
-![[Pasted image 20260727111654.png]]
 ## Summary
 
 This section explains **Tcpdump Packet Filtering**. It focuses on Filtering and Advanced Syntax Options.

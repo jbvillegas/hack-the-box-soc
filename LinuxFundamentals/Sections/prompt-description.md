@@ -12,7 +12,6 @@ In addition to displaying basic information like your **username** and **current
 
 The prompt can be customized using special characters and variables in the shell’s configuration file (.bashrc for the Bash shell). For example, we can use: the \u character to represent the current username, \h for the hostname, and \w for the current working directory.
 
-![[Pasted image 20260717090608.png]]
 
 Customizing the prompt can be a useful way to make your terminal experience more personalized and efficient. It can also be a helpful tool for troubleshooting and problem-solving, as it can provide important information about the system’s state at any given time.
 

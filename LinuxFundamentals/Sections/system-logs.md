@@ -12,7 +12,6 @@ In order to ensure the security of a Linux system, it is important to configure 
 - Application Logs
 - Security Logs
 
-![[Pasted image 20260722104435.png]]
 ## Summary
 
 This section explains **System Logs**. It focuses on the main ideas and practical examples.

@@ -7,7 +7,6 @@ Linux Distributions vs Solaris
 
 **Solaris** and **Linux** distributions are two types of operating systems that differ significantly. Firstly, Solaris is a proprietary operating system owned and developed by Oracle Corporation, and its source code is not available to the general public. In contrast, most Linux distributions are open-source, meaning that their source code is available for anyone to modify and use. Additionally, Linux distributions commonly use the Zettabyte File System (ZFS), which is a highly advanced file system that offers features such as data compression, snapshots, and high scalability. On the other hand, Solaris uses a Service Management Facility (SMF), which is a highly advanced service management framework that provides better reliability and availability for system services.
 
-![[Pasted image 20260722104703.png]]
 
 Differences
 

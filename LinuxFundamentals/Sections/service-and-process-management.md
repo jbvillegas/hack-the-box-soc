@@ -21,7 +21,6 @@ Most modern Linux distributions have adopted systemd as their initialization sys
 
 ### Most Commonly Used Signals
 
-![[Pasted image 20260722091422.png]]
 ## Summary
 
 This section explains **Service And Process Management**. It focuses on the main ideas and practical examples.

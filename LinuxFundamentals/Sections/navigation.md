@@ -6,9 +6,7 @@ One of the best ways to learn something new is to experiment with it. Here we co
 
 Let us start with the navigation. Before we move through the system, we have to find out in which directory we are. We can find out where we are with the command **pwd**.
 
-![[Pasted image 20260717100540.png]]
 
-![[Pasted image 20260717100555.png]]
 
 However, we will not see everything that is in this folder. A directory can also have hidden files that start with a dot at the beginning of its name (e.g., **.bashrc** or **.bash_history**). Therefore, we need to use the command **ls -la** to list all files of a directory:
 ## Summary

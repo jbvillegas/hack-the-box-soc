@@ -38,7 +38,6 @@ As penetration testers, identifying files with improper rights or permissions ca
 
 In contrast to **Nano**, Vim is a modal editor that can distinguish between text and command input. Vim offers a total of six fundamental modes that make our work easier and make this editor so powerful:
 
-![[Pasted image 20260717104143.png]]
 
 
 When we have the Vim editor open, we can go into command mode by typing **":"** and then typing **"q"** to close Vim.

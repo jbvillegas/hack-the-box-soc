@@ -8,20 +8,16 @@ This section serves as a quick refresher on networking and how some standard pro
 
 #### Networking Models
 
-![[Pasted image 20260725220335.png]]
 
-![[Pasted image 20260725220430.png]]
 
 When examining these two models, we can notice that the OSI model is segmented more than the TCP-IP model. This is because it is broken down into small functional chunks. Layers one through four of the OSI model are focused on controlling the transportation of data between hosts. This control includes everything from the physical medium used for transmission to the protocol utilized to manage the conversation or lack thereof when transporting data. Layers five through seven handle the interpretation, management, and presentation of the encapsulated data presented to the end-user. Think of the OSI model as the theory behind how everything works, whereas the TCP-IP model is more closely aligned with the actual functionality of networking. The TCP-IP model is a bit more blended, and the rules are flexible. The TCP-IP model comprises four layers where layers five, six, and seven of the OSI model align with layer four of the TCP-IP model. Layer three deals with transportation, layer two is the internet layer which aligns with the network layer in OSI, and layer one is the link-layer which covers layers two and one of the OSI model.
 
 Throughout this module, we will examine many different Protocol Data Units (`PDU`), so a functional understanding of how it appears in theory and on the wire is required. A PDU is a data packet made up of control information and data encapsulated from each layer of the OSI model. The breakout below will show how the layers in the two models match up to a PDU.
-![[Pasted image 20260725220504.png]]
 
 When inspecting a PDU, we need to keep the idea of encapsulation in mind. As our data moves down the protocol stack, each layer will wrap the previous layers' data in a new bubble we call **encapsulation**. This bubble adds the necessary information of that layer into the header of the PDU. This information can vary by level, but it includes what is held by the previous layer, operational flags, any options required to negotiate communications, the source and destination IP addresses, ports, transport, and application layer protocols.
 
 ## PDU Packet Breakdown
 
-![[Pasted image 20260725220637.png]]
 
 ## Addressing Mechanisms
 
@@ -67,7 +63,6 @@ Along with a much larger address space, IPv6 provides: Better support for Multic
 
 IPv6 uses four main types of addresses within its schema:
 
-![[Pasted image 20260725220744.png]]
 
 ## TCP / UDP, Transport Mechanisms
 
@@ -77,7 +72,6 @@ The Transport Layer has several mechanisms to help ensure the seamless delivery 
 
 Let us take a second to examine these two protocols side by side.
 
-![[Pasted image 20260725220904.png]]
 
 By looking at the table above, we can see that TCP and UDP provide two very different data transmission methods. TCP is considered a more reliable protocol since it allows for error checking and data acknowledgment as a normal function. In contrast, UDP is a quick, fire, and forget protocol best utilized when we care about speed over quality and validation.
 

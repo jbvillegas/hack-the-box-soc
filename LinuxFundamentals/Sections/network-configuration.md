@@ -7,7 +7,6 @@ Network Access Control
 
 Another vital component of network configuration is network access control (NAC). As penetration testers, we need to be well-versed in how NAC can enhance network security and the various technologies available. Key NAC models include:
 
-![[Pasted image 20260722102630.png]]
 
 Configuring Linux network devices for NAC involves setting up security policies like SELinux (Security-Enhanced Linux), AppArmor profiles for application security, and using TCP wrappers to control access to services based on IP addresses. More about this in the future sections.
 

@@ -6,13 +6,9 @@
 
 This process helps security specialists determine anomalies, including security threats in the network, early and effectively pinpoint threats. Network Traffic Analysis can also facilitate the process of meeting security guidelines. Attackers update their tactics frequently to avoid detection and leverage legitimate credentials with tools that most companies allow in their networks, making detection and, subsequently, response challenging for defenders. In such cases, Network Traffic Analysis can again prove helpful. Everyday use cases of NTA include:
 
-![[Pasted image 20260723215105.png]]
-
 ## Environment and Equipment
 
 The list below contains many different tools and equipment types that can be utilized to perform network traffic analysis. Each will provide a different way to capture or dissect the traffic. Some offer ways to copy and capture, while others read and ingest. This module will explore just a few of these ([Wireshark](https://www.wireshark.org/) and [tcpdump](https://www.tcpdump.org/) mostly). Keep in mind these tools are not strictly geared for admins. Many of these can be used for malicious reasons as well.
-
-![[Pasted image 20260723215205.png]]
 
 ## BPF Syntax
 
@@ -32,7 +28,6 @@ Traffic analysis is not an exact science. NTA can be a very dynamic process and 
 
 #### NTA Workflow
 
-![[Pasted image 20260723215234.png]]
 #### 1. Ingest Traffic
 
 Once we have decided on our placement, begin capturing traffic. Utilize capture filters if we already have an idea of what we are looking for.

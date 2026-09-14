@@ -2,8 +2,6 @@
 
 When the investigation is complete and we have understood the type of incident and the impact on the business (based on all the leads gathered and the information assembled in the timeline), it is time to enter the containment stage to prevent the incident from causing more damage.
 
-![[Pasted image 20260718235422.png]]
-
 Incident response flow titled “Containment, Eradication, and Recovery Stage.” Steps listed: Investigation is complete → Containment Strategy → Evidence gathering (note: Preserve Evidence) → Identify the attacking host → Eradication and Recovery → Bring systems back to normal operation. Side notes under containment: Forensic images, changing passwords, applying firewall rules, applying a system patch.
 Containment
 

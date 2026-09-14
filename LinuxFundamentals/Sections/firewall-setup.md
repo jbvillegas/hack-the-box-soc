@@ -12,7 +12,6 @@ In Linux, the firewall functionality is typically implemented using the Netfilte
 
 The iptables utility provides a flexible set of rules for filtering network traffic based on various criteria such as source and destination IP addresses, port numbers, protocols, and more. There also exist other solutions like nftables, ufw, and firewalld. Nftables provides a more modern syntax and improved performance over iptables. However, the syntax of nftables rules is not compatible with iptables, so migration to nftables requires some effort. UFW stands for “Uncomplicated Firewall” and provides a simple and user-friendly interface for configuring firewall rules. **UFW** is built on top of the iptables framework like nftables and provides an easier way to manage firewall rules. Finally, **FirewallD** provides a dynamic and flexible firewall solution that can be used to manage complex firewall configurations, and it supports a rich set of rules for filtering network traffic and can be used to create custom firewall zones and services. It consists of several components that work together to provide a flexible and powerful firewall solution. The main components of iptables are:
 
-![[Pasted image 20260722104108.png]]
 
 ## Rules and Targets
 
@@ -20,13 +19,11 @@ Iptables rules are used to define the criteria for filtering network traffic and
 
 Each rule consists of a set of criteria or matches and a target specifying the action for packets that match the criteria. The criteria or matches match specific fields in the IP header, such as the source or destination IP address, protocol, source, destination port number, and more. The target specifies the action for packets that match the criteria. They specify the action to take for packets that match a specific rule. For example, targets can accept, drop, reject, or modify the packets. Some of the common targets used in iptables rules include the following:
 
-![[Pasted image 20260722104157.png]]
 
 ## Matches
 
 Matches are used to specify the criteria that determine whether a firewall rule should be applied to a particular packet or connection. Matches are used to match specific characteristics of network traffic, such as the source or destination IP address, protocol, port number, and more.
 
-![[Pasted image 20260722104258.png]]
 ## Summary
 
 This section explains **Firewall Setup**. It focuses on Iptables, Rules and Targets, Matches.

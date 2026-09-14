@@ -96,7 +96,6 @@ Then, RDP to `[Target IP]` using the provided credentials and answer the quest
 `villegasjb@htb[/htb]$ xfreerdp /u:Administrator /p:'HTB_@cad3my_lab_W1n10_r00t!@0' /v:[Target IP] /dynamic-resolution`
 ```
 
-![[Pasted image 20260804160506.png]]
 ## Summary
 
 This section explains **Tapping Into ETW**. It focuses on Detection Example 1: Detecting Strange Parent-Child Relationships, Detection Example 2: Detecting Malicious .NET Assembly Loading, Practical Exercise.

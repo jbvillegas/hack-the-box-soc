@@ -1,4 +1,3 @@
-![[Pasted image 20260722090853.png]]
 
 ## Advanced Package Manager (APT)
 

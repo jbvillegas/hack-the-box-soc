@@ -4,8 +4,6 @@ The victim in this incident is **Insight Nexus**, a mid-sized market research an
 
 Let's take a look at the incident to understand some challenges that incident handlers face. This incident shows an example of the patterns repeatedly observed in real-world incidents. The victim in this scenario is **Insight Nexus**, a global market research firm that handles sensitive competitive data for high-profile clients in the IT sector. The firm becomes a target of two distinct threat groups operating simultaneously within its environment. The first threat actor gained entry when system administrators forgot to change the default admin/admin password on an internet-facing application, i.e., **ManageEngine ADManager Plus**, after a product update. By leveraging this, the attackers logged in successfully, performed reconnaissance, mapped users and machines, and eventually created new privileged Active Directory accounts. Using one of the newly created accounts, the adversaries pivoted further into the environment, identifying an external RDP service exposed by misconfiguration. Exploiting that entry point, they escalated their control and eventually used Group Policy Objects (GPOs) to deploy spyware using an MSI package across multiple endpoints.
 
-![[Pasted image 20260720215351.png]]
-
 
 For days, these activities went unnoticed. The incident was first discovered one day when an analyst from the SOC team investigated an alert on **TheHive** (Security Incident Response Platform) related to the creation of a suspicious file named **checkme.txt** in the root of a web server. Upon investigation, they discovered that it was deliberately placed there as a signature — "SilentJackal was here". This unusual artifact triggered a deeper investigation. What made the situation more complex was that the SOC team then realized two different threat actor groups were active in the same environment. While the first group was still exploring and deploying persistence mechanisms, a second actor had already compromised a vulnerable PHP application earlier, exfiltrated sensitive market research data, and significantly reduced their activity after achieving their objective, leaving only occasional connections to an external IP.
 
@@ -44,14 +42,10 @@ A system administrator noticed unusual outbound connections from the ManageEngin
 
 The SOC team started investigating this incident and found many reconnaissance attempts on the external web applications.
 
-![[Pasted image 20260720220538.png|697]]
-
 
 Upon further investigation, the responders found that on **2025-10-01 03:12:02**, the threat actor **Crimson Fox** obtained initial access via ManageEngine. Initially, they performed targeted login attempts against manage.insightnexus.com. They found that the default credentials (i.e., **admin/admin**) worked, which means either the system administrators forgot to change the default credentials after an update or they left the web application accessible to everyone on the public internet. The result was unfortunate for the organization, and the threat actors performed an interactive web login via HTTPS. The logon audit report shows this successful login activity.
 
 - **Organizational oversight:** Despite vendor advisories, the default credentials were never changed. Multi-factor authentication was not enforced, and there was no WAF inspection on the endpoint. The logon events of the web application were not sent to a centralized SIEM.
-
-![[Pasted image 20260721155625.png]]
 
 
 There was a Java web vulnerability related to the ManageEngine ADManager Plus product where unauthenticated remote code execution was possible. The actor utilized this and established an outbound C2 over HTTPS to **103.112.60.117** (an attacker-controlled cloud host), impersonating update traffic. The following Sysmon Event ID 3 (Network Connection detected) was logged:
@@ -68,8 +62,6 @@ DestinationPort: 443
 ```
 
 On **2025-10-02 04:02:11**, attackers enumerated domain users and computers via queries from the ManageEngine console. Using the ManageEngine foothold, they also created a new Domain Administrator account. During Active Directory enumeration, they found that a Windows 10 machine (**DEV-021**) had a publicly exposed RDP port. This desktop machine is used occasionally by developers to perform development and release tasks by taking RDP directly on its public IP while working from home. The attacker took RDP directly into this machine using the newly created Domain Administrator account.
-
-![[Pasted image 20260721155749.png]]
 
 
 For this activity, the following event log was created in the Windows Event Logs with Event **ID 4624**.
@@ -96,8 +88,6 @@ An account was successfully logged on.
 ```
 
 After a successful logon, the attackers conducted some domain reconnaissance. They found some interesting file shares on the file server, which they attempted to access multiple times. On the file server, they located client project folders that contained draft reports, survey data, and market forecasts.
-
-![[Pasted image 20260721155839.png]]
 
 
 On the file server, multiple event logs were created, such as **5140(S, F): A network share object was accessed**. However, there were no rules created for generating alerts specifically for these public IP RDP events.
@@ -151,8 +141,6 @@ level: medium
 
 After exploring and observing for a week, they started compressing and exfiltrating selected data. The attackers packaged stolen client materials into a file named **diagnostics_data.zip**, a filename chosen to resemble routine telemetry. The archive was then uploaded to the attacker-controlled host over HTTPS. Because the filename resembled legitimate diagnostics data and the upload used standard HTTPS, it did not immediately raise alarms. This tactic increases the attackers chance of exfiltrating data before defenders escalate.
 
-![[Pasted image 20260721155951.png]]
-
 
 Then, on **2025-10-04 02:10:45**, from **DEV-021**, they executed some PowerShell scripts that used domain administrator credentials to create a Group Policy Object (GPO) that pushes an MSI package (**java-update.msi**) across the domain. This MSI package created a scheduled task to run a process that performs spying and data exfiltration on the machines.
 
@@ -170,12 +158,8 @@ Sysmon Event 1: Image: C:\Windows\System32\msiexec.exe CommandLine: "msiexec /i 
 
 This malware, with spying and data exfiltration capabilities, is deployed on all domain machines using GPO.
 
-![[Pasted image 20260721160057.png]]
-
 
 Around the same time, another threat actor, **Silent Jackal**, also performed some activities on a separate PHP-based reporting portal. This server had an unpatched file upload vulnerability, which was exploited by the threat actor to gain access to this server. Silent Jackal uploaded a file into the root directory of the web server. Their activities appeared limited to leaving the **checkme.txt** marker file. This created noise in the environment and provided defenders with the first clue of compromise.
-
-![[Pasted image 20260721160140.png]]
 
 
 However, the threat actor did not proceed beyond their initial access. This was likely a low-skill intrusion meant to signal presence rather than cause immediate damage.

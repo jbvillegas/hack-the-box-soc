@@ -3,7 +3,6 @@ Now, let’s dive into some hands-on practice to get comfortable with using the 
 
 Since we’ll be working with various Linux systems, it's important to understand their structure, including system details, processes, network configurations, users/user settings, and directories, along with their related parameters. Below is a list of essential tools to help gather this information. Most of these tools come pre-installed. However, this knowledge is not only crucial for routine Linux tasks, but also plays a key role when assessing security configurations, identifying vulnerabilities, or preventing potential security risks in Linux operating systems.
 
-![[Pasted image 20260717091755.png]]
 
 ## Logging In via SSH
 
