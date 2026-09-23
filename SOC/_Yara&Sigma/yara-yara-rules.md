@@ -1,0 +1,5 @@
+- **Topic:** YARA and YARA Rules  
+- **Quick short description:** YARA is a pattern-matching tool and rule format used to detect and classify files, malware, suspicious content, and IOCs.  
+- **Summary:** YARA scans files, directories, or memory using rules that define strings, regex, binary patterns, and conditions. Rules have metadata, strings, and a condition section. It is used for malware detection, file classification, IOC detection, custom signatures, incident response, and threat hunting.  
+- **What I did:** Reviewed YARA’s purpose, usages, scanning workflow, rule structure, and a WannaCry ransomware rule example.  
+- **What I learned:** YARA rules are flexible and precise, can detect textual and binary patterns, help SOC analysts identify threats, and support proactive detection when combined with custom or community rules.
