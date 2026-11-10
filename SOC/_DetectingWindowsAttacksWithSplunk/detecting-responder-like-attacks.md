@@ -29,6 +29,7 @@ We can use a PowerShell script to automate an scheduled task to aid in detection
     ```
 
 
-- **What I did:** 
+- **What I did:** I read and studied the material to then modify and use the Sysmon Event 22 event provided by the activity in Splunk. I wrote a Splunk script to identify all the names whose locations were spoofed. 
 
-- **What I learned:** 
+- **What I learned:** I learned that these attacks focuse on attacking ineficiencies in DNS resolution systems. I have also learned some effective ways to prevent, detect and log these types of poisonous attacks. 
+Splunk as always is a great tool for analyzing and filtering this, and to sort out names. 
